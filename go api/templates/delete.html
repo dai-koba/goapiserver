@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<body>
+    <h1>削除確認</h1>
+<p>本当に削除しますか？</p>
+<ul>
+    <li>名前： {{.user.Name}}</li>
+    <li>年齢： {{.user.Age}}</li>
+    <li>Email： {{.user.Email}}</li>
+    <li>作成時間： {{.user.CreatedAt}}</li>
+</ul>
+
+<form method="post" action="/delete/{{.user.ID}}">
+    <p><input type="submit" value="削除"></p>
+    <p><a href="/">戻る</a></p>
+</form>
+
+    </body>
+    </html>
